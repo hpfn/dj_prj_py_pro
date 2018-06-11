@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    # the order is important. If you are going to use it only for media check docs
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
+    'certgen.core',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +123,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+# Use hashed files
+# be aware that collectstatic will create a JSON file
+# This file will be available at ./manifest/staticfiles.json by default
+# to change that see docs
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+# Cloudinary credentials
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config('CLOUD_NAME'),
+    'API_KEY': config('API_KEY'),
+    'API_SECRET': config('API_SECRET')
+}
