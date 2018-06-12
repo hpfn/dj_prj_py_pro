@@ -1,0 +1,8 @@
+SECRET_KEY=please__change__this_not_so_good_secret
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1, .localhost
+
+# Cloudinary
+CLOUD_NAME=xxx
+API_KEY=xxx
+API_SECRET=xxx
