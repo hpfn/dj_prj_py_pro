@@ -12,5 +12,5 @@ django-cloudinary-storage==0.2.3
 idna==2.7
 mock==2.0.0
 pbr==4.1.0
-requests==2.18.4
+requests==2.19.1
 urllib3==1.22
