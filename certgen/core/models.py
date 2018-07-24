@@ -58,3 +58,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     def email_user(self, subject, message, from_email=None, **kwargs):
         """Send an email to this user."""
         send_mail(subject, message, from_email, [self.email], **kwargs)
+
+
+class Profile(models.Model):
+    nome_completo = models.CharField(max_length=255)
+    usuario = models.OneToOneField(User, on_delete=models.DO_NOTHING)

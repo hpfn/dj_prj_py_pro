@@ -75,3 +75,7 @@ def test_useradmin_method_attr(a, b):
 
 def test_template_used():
     assert UserAdmin.add_form_template == 'admin/auth/user/add_form.html'
+
+
+def test_profile_admin():
+    assert hasattr(admin, 'ProfileAdmin')
