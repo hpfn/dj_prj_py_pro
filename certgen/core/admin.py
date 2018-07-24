@@ -15,7 +15,7 @@ from django.urls import path, reverse
 from django.utils.html import escape
 from django.utils.translation import gettext, gettext_lazy as _
 
-from certgen.core.models import User
+from certgen.core.models import User, Profile
 
 
 @admin.register(User)
@@ -134,7 +134,7 @@ class UserAdmin(admin.ModelAdmin):
                             user._meta.model_name,
                         ),
                         args=(user.pk,),
-                        )
+                    )
                 )
         else:
             form = self.change_password_form(user)
@@ -168,7 +168,7 @@ class UserAdmin(admin.ModelAdmin):
             self.change_user_password_template or
             'admin/auth/user/change_password.html',
             context,
-            )
+        )
 
     def response_add(self, request, obj, post_url_continue=None):
         """
@@ -185,3 +185,8 @@ class UserAdmin(admin.ModelAdmin):
             request.POST = request.POST.copy()
             request.POST['_continue'] = 1
         return super().response_add(request, obj, post_url_continue)
+
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    pass
