@@ -40,7 +40,7 @@ class_attrs = [
     (User, 'is_staff'),
     (User, 'is_active'),
     (User, 'date_joined'),
-    (User, 'EMAIL_FIELD'),
+    #  (User, 'EMAIL_FIELD'),
     (User, 'USERNAME_FIELD'),
     (User, 'REQUIRED_FIELDS'),
     (User, 'clean'),
