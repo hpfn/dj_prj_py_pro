@@ -4,7 +4,7 @@ from certgen.django_assertions import dj_assert_template_used
 
 
 @pytest.fixture
-def client_get_resp(client):
+def client_get_resp(client, db):
     return client.get(r('moveis:index'))
 
 
@@ -20,4 +20,4 @@ def test_template_used(client_get_resp):
 
 def test_context_key(client_get_resp):
     resp = client_get_resp
-    assert 'moveis' in resp.context
+    assert 'categorias' in resp.context
