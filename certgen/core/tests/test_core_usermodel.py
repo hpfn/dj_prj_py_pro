@@ -35,7 +35,7 @@ def test_usermanager_subclass(a, b):
 
 
 class_attrs = [
-    (User, 'name'),
+    (User, 'username'),
     (User, 'email'),
     (User, 'is_staff'),
     (User, 'is_active'),
@@ -67,11 +67,11 @@ def test_get_name():
 
 def test_unique_email(django_user_model):
     usr = User()
-    usr.name = 'Jose'
+    usr.username = 'Jose'
     usr.email = 'jose@email.com'
 
     usr1 = User()
-    usr1.name = 'Jose'
+    usr1.username = 'Jose'
     usr1.email = 'jose@email.com'
 
     with pytest.raises(IntegrityError):

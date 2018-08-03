@@ -15,6 +15,6 @@ def test_attrs(a, b):
 
 
 def test_create_profile(django_user_model):
-    user = User.objects.create(name='teste@teste.com', password='12345678')
+    user = User.objects.create(email='teste@teste.com', password='12345678')
     Profile.objects.create(nome_completo='teste de criacao', usuario=user)
     assert Profile.objects.get(nome_completo='teste de criacao')
