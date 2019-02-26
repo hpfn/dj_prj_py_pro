@@ -12,5 +12,5 @@ pycodestyle==2.4.0
 pyflakes==2.0.0
 pytest==4.1.1
 pytest-cov==2.6.1
-pytest-django==3.4.5
+pytest-django==3.4.8
 six==1.12.0
