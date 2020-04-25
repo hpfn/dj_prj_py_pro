@@ -4,7 +4,7 @@ python-decouple==3.1
 gunicorn==19.9.0
 psycopg2-binary==2.7.6.1
 dj-database-url==0.5.0
-Pillow==5.4.1
+Pillow==7.1.2
 # cloudinary
 certifi==2018.11.29
 chardet==3.0.4
