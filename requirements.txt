@@ -8,7 +8,7 @@ Pillow==5.4.1
 # cloudinary
 certifi==2018.11.29
 chardet==3.0.4
-cloudinary==1.15.0
+cloudinary==1.27.0
 django-cloudinary-storage==0.2.3
 idna==2.8
 mock==2.0.0
