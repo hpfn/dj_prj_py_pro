@@ -6,7 +6,7 @@ psycopg2-binary==2.7.6.1
 dj-database-url==0.5.0
 Pillow==5.4.1
 # cloudinary
-certifi==2018.11.29
+certifi==2022.5.18.1
 chardet==3.0.4
 cloudinary==1.15.0
 django-cloudinary-storage==0.2.3
